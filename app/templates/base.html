@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav id="nav__main">
+        <div id="nav-content__div">
+            <ul>
+                <li><a href="{{ url_for('hello') }}" class="nav-link__a">Home</a></li>
+                <li><a href="#" class="nav-link__a">Products</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link__a">About</a></li>
+                <li><a href="#" class="nav-link__a">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <footer>
+        <div id="base-main__footer">
+            Desenvolvido por Thiago Carvalho
+        </div>
+    </footer>
+</body>
